@@ -1,10 +1,10 @@
-SOURCES = $(wildcard *.cpp)
+SOURCES = $(wildcard *.cpp) $(wildcard */*.cpp)
 OBJECTS = $(SOURCES:.cpp=.o)
 DEPS = $(SOURCES:%.cpp=%.d)
 TARGET = asw
 
 CFLAGS = -std=gnu++14 -Ofast
-LFLAGS = -lm -lSDL2 -Ofast
+LFLAGS = -lm -lSDL2 -lSDL2_image -Ofast
 
 all: $(TARGET)
 
